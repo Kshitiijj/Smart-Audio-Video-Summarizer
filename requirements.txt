@@ -1,0 +1,14 @@
+
+###**requirements.txt**
+
+```txt
+Flask==2.3.3
+pydub==0.25.1
+sumy==0.11.0
+scikit-learn==1.4.2
+nltk==3.8.1
+yt-dlp==2024.4.9
+whisper-openai==20231117
+ffmpeg-python==0.2.0
+torch==2.2.2
+numpy==1.26.4

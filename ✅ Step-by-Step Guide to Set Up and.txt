@@ -1,0 +1,116 @@
+✅ Step-by-Step Guide to Set Up and Run the Project
+🧱 Step 1: Install Python
+Make sure you have Python 3.8 or above installed.
+
+Download Python from https://www.python.org/downloads/
+
+During installation, check the box that says “Add Python to PATH”
+
+🔁 Step 2: Install ffmpeg
+The app uses ffmpeg for audio conversion.
+
+Download from: https://ffmpeg.org/download.html
+
+For Windows:
+
+Download a static build (e.g., from https://www.gyan.dev/ffmpeg/builds/)
+
+Extract the zip
+
+Copy the path to bin/ (like C:\ffmpeg\bin)
+
+Add this path to your Environment Variables → System Variables → Path
+
+Restart your terminal/PC after adding
+
+To verify:
+
+ffmpeg -version
+📂 Step 3: Clone the Project
+Open your terminal and run:
+
+git clone https://github.com/your-username/audio-summarizer.git
+cd audio-summarizer
+Or manually download and extract the ZIP from GitHub.
+
+🐍 Step 4: Set Up a Virtual Environment
+Create and activate a virtual environment to manage dependencies cleanly.
+
+# Create virtual environment
+python -m venv venv
+
+# Activate it
+# On Windows:
+venv\Scripts\activate
+
+# On Mac/Linux:
+source venv/bin/activate
+📦 Step 5: Install Dependencies
+Make sure you're inside the project directory with requirements.txt.
+
+pip install -r requirements.txt
+This will install:
+
+Flask
+
+Whisper (for transcription)
+
+Sumy (for summarization)
+
+Scikit-learn (for keyword extraction)
+
+pydub, yt-dlp, nltk, ffmpeg-python, etc.
+
+🔽 Step 6: Download Required NLTK Data
+The summarization library uses nltk, which needs some initial downloads.
+
+In Python terminal or add to app.py:
+
+import nltk
+nltk.download('punkt')
+🧪 Step 7: Test Whisper
+If you want to test if Whisper works:
+
+python
+Copy
+Edit
+import whisper
+model = whisper.load_model("base")
+result = model.transcribe("sample.wav")
+print(result["text"])
+If this works, your transcription setup is fine.
+
+▶️ Step 8: Run the Flask App
+
+
+
+Upload:
+
+.mp3, .wav, or .mp4 file OR
+
+Paste a YouTube link
+
+Click Submit
+
+Wait for processing (might take 30–60 seconds)
+
+Results will show:
+
+Full Transcribed Text
+
+Summary
+
+Keywords
+
+🧹 Step 10: Cleanup (Optional)
+To remove the temporary audio files or logs, you can:
+
+del temp_audio.*
+📦 Additional Notes
+For large audio files, Whisper base or small model is ideal to balance speed & accuracy.
+
+To use better accuracy:
+
+model = whisper.load_model("medium")  # or "large"
+But it requires more RAM and time.
+

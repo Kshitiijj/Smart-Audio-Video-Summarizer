@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9e3e3; /* Light pink background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* White container */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff6f61; /* Pink heading */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file-upload, .youtube-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: #333333;
+}
+
+input[type="file"], input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ff6f61; /* Pink border */
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="file"]:focus, input[type="text"]:focus {
+    border-color: #ff3b2f; /* Darker pink on focus */
+}
+
+button {
+    padding: 12px;
+    background-color: #ff6f61; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3b2f; /* Darker pink on hover */
+}
+
+.or {
+    color: #666666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Results Section */
+#results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+h2 {
+    color: #ff6f61; /* Pink headings */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    background-color: #f9e3e3; /* Light pink background for text */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ff6f61; /* Pink border */
+    font-size: 14px;
+    color: #333333;
+}
+
+#downloadPdf {
+    margin-top: 20px;
+    background-color: #ff6f61; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadPdf:hover {
+    background-color: #ff3b2f; /* Darker pink on hover */
+}
+
+/* Loading Indicator */
+.loading {
+    color: #ff6f61; /* Pink loading text */
+    font-size: 16px;
+    margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Audio & Video Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Smart Audio & Video Summarizer</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="file-upload">
+                <label for="audioFile">Upload Audio/Video File:</label>
+                <input type="file" id="audioFile" name="audioFile" accept=".mp3,.wav,.mp4">
+            </div>
+            <p class="or">Or</p>
+            <div class="youtube-link">
+                <label for="youtubeLink">Enter YouTube Video Link:</label>
+                <input type="text" id="youtubeLink" name="youtubeLink" placeholder="https://youtu.be/example">
+            </div>
+            <button type="submit">Upload and Process</button>
+            <div id="loading" class="loading" style="display: none;">Processing... Please wait.</div>
+        </form>
+        <div id="results">
+            <h2>📝 Transcribed Text</h2>
+            <p id="transcribedText"></p>
+            <h2>📌 Summary</h2>
+            <p id="summary"></p>
+            <h2>🔑 Keywords</h2>
+            <p id="keywords"></p>
+            <button id="downloadPdf" style="display: none;">Download PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
